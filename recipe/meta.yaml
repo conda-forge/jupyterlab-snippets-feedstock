@@ -19,7 +19,7 @@ requirements:
     - python >=3.6
     - setuptools
     - pip
-    - jupyter-packaging >=0.7.9,<8
+    - jupyter-packaging >=0.7.9,<0.8
   run:
     - python >=3.6
     - jupyterlab >=3,<4
