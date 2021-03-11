@@ -26,7 +26,7 @@ requirements:
 
 test:
   commands:
-     python -c "import importlib;importlib.import_module('jupyterlab-snippets')"
+     python -c "import importlib;importlib.import_module('jupyterlab_snippets')"
 
 about:
   home: https://github.com/QuantStack/jupyterlab-snippets
