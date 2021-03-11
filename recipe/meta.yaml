@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-snippets" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8705324695fa9c79eb95bba16371d063a1d434f0afc495ad327fa41dfdddc8ba
+  sha256: ea8ed161770d72953a9e47ff373f863ddd50370071db0b1bb791673a0c40a523
 
 build:
   noarch: python
@@ -19,11 +19,10 @@ requirements:
     - python >=3.6
     - setuptools
     - pip
-    - jupyterlab >=2,<3
-    - nodejs
+    - jupyter-packaging >=0.7.9,<8
   run:
-    - python
-    - jupyterlab >=2,<3
+    - python >=3.6
+    - jupyterlab >=3,<4
 
 test:
   commands:
