@@ -39,6 +39,7 @@ Installing `jupyterlab-snippets` from the `conda-forge` channel can be achieved 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `jupyterlab-snippets` can be installed with:
@@ -117,6 +118,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@fcollonval](https://github.com/fcollonval/)
 * [@jtpio](https://github.com/jtpio/)
 * [@mariobuikhuizen](https://github.com/mariobuikhuizen/)
 
