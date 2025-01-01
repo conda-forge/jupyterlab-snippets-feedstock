@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8f054bb257b31f20732702962d251924693973a410fcd887d68ec72418d0711c
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python >=3.6
+  host:
+    - python {{ python_min }}
     - setuptools
     - pip
     - jupyter-packaging >=0.10,<1
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - jupyterlab >=3,<4
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
      python -c "import importlib;importlib.import_module('jupyterlab_snippets')"
 
